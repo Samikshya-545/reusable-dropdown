@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Dropdown from './Dropdown';
 
-function App() {
+const App = () => {
+  const options = Array.from({ length: 10 }, (_, index) => `Option ${index + 1}`);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Reusable Dropdown Component</h1>
+      <Dropdown options={options} />
     </div>
   );
-}
+};
 
 export default App;
+
+
+
+
